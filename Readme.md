@@ -26,36 +26,67 @@ The goal is to **build a Binary Classifier using Logistic Regression** to predic
 Text-based flowchart showing entire process:
 
 [Start]
+
 ↓
+
 Load dataset (`pd.read_csv`)
+
 ↓
+
 Initial inspection → shape, columns, first few rows
+
 ↓
+
 Drop unnecessary/empty columns (`Unnamed: 32`, `id`)
+
 ↓
+
 Check and clean target column (`diagnosis`) → ensure only 'M' or 'B'
+
 ↓
+
 Encode target: 'M' → 1, 'B' → 0
+
 ↓
+
 Split into features (X) and target (y)
+
 ↓
+
 Train-Test Split (80/20) with class stratification
+
 ↓
+
 Standardize features (mean=0, std=1) with `StandardScaler`
+
 ↓
+
 Define and train Logistic Regression model (`LogisticRegression`)
+
 ↓
+
 Predict on test set (`predict`) and get probabilities (`predict_proba`)
+
 ↓
+
 Evaluate model performance → Confusion Matrix, Accuracy, Precision, Recall, ROC-AUC
+
 ↓
+
 Plot ROC Curve and Feature Importance
+
 ↓
+
 Adjust classification threshold for trade-off between precision \& recall
+
 ↓
+
 Save trained model and scaler with Joblib for reuse
+
 ↓
+
 [End]
+
 
 
 
